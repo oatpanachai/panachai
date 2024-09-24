@@ -1,0 +1,101 @@
+/* LockButton.css */
+.lock-button {
+  margin: 5px;
+  width: 85px;
+  height: 70px;
+  max-width: 120px;
+  max-height: 90px;
+  color: white;
+  border-radius: 15px;
+  font-size: 24px;
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Conditional styles */
+.lock-button.disabled {
+  background-color: white;
+  cursor: not-allowed;
+}
+
+.lock-button.available {
+  background-color: green;
+  cursor: pointer;
+}
+
+  .lock-button:hover {
+      transform: scale(1.05);  /* Slightly increase the size */
+    }
+    
+
+.reserve-button {
+    padding: 10px 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out; /* เพิ่ม transition */
+  }
+  
+  .reserve-button:hover {
+    transform: translateY(-5px); /* ขยับขึ้นเล็กน้อยเมื่อ hover */
+  }
+  
+
+.popup-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease-in-out; /* เพิ่ม transition */
+    flex: 1; /* ใช้ flex-grow เพื่อให้ปุ่มขยายเต็มพื้นที่ */
+  }
+  
+  .popup-button:hover {
+    transform: translateY(-5px); /* ขยับขึ้นเล็กน้อยเมื่อ hover */
+  }
+  
+  .popup-button.cancel {
+    background-color: transparent;
+    color: red;
+    border: 2px solid red;
+  }
+  
+  .popup-button.confirm {
+    background-color: red;
+    color: white;
+  }
+  
+
+  .marquee-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: black;
+    width: 350px; /* กำหนดความกว้างของคอนเทนเนอร์ */
+    overflow: hidden; /* ซ่อนข้อความที่ล้นออกไป */
+  }
+  
+  .marquee-text {
+    display: inline-block;
+    white-space: nowrap; /* ป้องกันไม่ให้ข้อความมีการแรพ */
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
